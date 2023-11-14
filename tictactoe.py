@@ -56,11 +56,11 @@ class TicTacToe(Tk):
         self.check_secondary_diagonal()
         self.check_principal_diagonal()
         if self.winner != '':
-            label = Label(text=f'{self.winner} Wins!', font=('Arial', 26, 'bold'), bg='black', fg='white')
+            label = Label(text=f'{self.winner} Wins!', font=('Verdana', 26, 'bold'), bg='black', fg='white')
             label.grid(row=4, columnspan=3)
             self.is_running = False
         elif self.move_count == 9:
-            label = Label(text=f'It\'s a Draw', font=('Arial', 26, 'bold'), bg='black', fg='white')
+            label = Label(text=f'It\'s a Draw', font=('Verdana', 26, 'bold'), bg='black', fg='white')
             label.grid(row=4, columnspan=3)
             self.is_running = False
 
@@ -86,9 +86,9 @@ class TicTacToe(Tk):
         for row in range(3):
             for col in range(3):
                 grid_button = Button(height=4, width=9, command=lambda r=row, c=col: self.move(r, c),
-                                     font=('Arial', 12))
+                                     font=('Verdana', 12))
                 grid_button.grid_propagate(False)
                 self.board[(row, col)] = grid_button
                 grid_button.grid(row=row, column=col, padx=5, pady=5)
-        game_label = Label(text='Tic Tac Toe', font=('Arial', 26, 'bold'), bg='black', fg='white', pady=5)
+        game_label = Label(text='Tic Tac Toe', font=('Verdana', 26, 'bold'), bg='black', fg='white', pady=5)
         game_label.grid(row=3, columnspan=3)
